@@ -309,6 +309,9 @@ button {
       }
     }
     &__menu {
+      &-mobile-icon {
+        display: none;
+      }
       &-icon {
         display: none;
       }
@@ -343,11 +346,9 @@ button {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-auto-flow: row;
+    margin-bottom: -4.5px;
     &__title {
       padding: 0;
-    }
-    &__image {
-      height: 100%;
     }
     &__container {
       text-align: left;
