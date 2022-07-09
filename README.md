@@ -12,7 +12,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -25,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](./images/screenshot.jpg)
 
 ### Links
 
@@ -50,4 +49,3 @@ During this challenge, I have learned about Vite and its integration with vanill
 
 - Github - [NicolasMontoya](https://github.com/uzoway)
 - Frontend Mentor - [NicolasMontoya](https://www.frontendmentor.io/profile/NicolasMontoya)
-
