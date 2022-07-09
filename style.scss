@@ -1,0 +1,413 @@
+:root {
+
+// Colors
+--soft-read: hsl(7, 99%, 70%);
+--yellow: hsl(51, 100%, 49%);
+--dark-desaturated-cyan: hsl(167, 40%, 24%);
+--dark-blue: hsl(198, 62%, 26%);
+--dark-moderate-cyan: hsl(168, 34%, 41%);
+--very-dark-desaturated-blue: hsl(212, 27%, 19%);
+--very-dark-grayish-blue: hsl(213, 9%, 39%);
+--dark-grayish-blue: hsl(232, 10%, 55%);
+--grayish-blue: hsl(210, 4%, 67%);
+--white: hsl(0, 0%, 100%);
+
+// Fonts
+--default-font: 18px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--default-font);
+}
+
+h1, h2, h3, h4, p, div, nav{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  text-decoration: none;
+  border: none;
+}
+
+.site {
+  width: 100%;
+  &__header {
+    padding: 32px 24px 130px;
+    background-repeat: no-repeat;
+    background-image: url('/images/mobile/image-header.jpg');
+    background-size: cover;
+    background-position: center;
+    &-logo {
+      color: var(--white);
+    }
+  }
+
+  &__footer {
+    background-color: hsl(167, 44%, 70%);
+    padding: 60px 8%;
+    text-align: center;
+    &-logo {
+      width: 180px;
+    }
+    &-menu {
+      font-family: 'Barlow';
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 6%;
+      > a {
+        color: var(--dark-moderate-cyan);
+      }
+    }
+    &-social {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 0 20px;
+    }
+  }
+
+  &__title {
+    color: var(--white);
+    font-family: 'Fraunces';
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    margin-bottom: 60px;
+  }
+
+  &__menu{
+    display: flex;
+    justify-content: space-between;
+    &-banner {
+      margin-top: 85px;
+      text-align: center;
+    }
+    &-mobile-icon {
+      align-self: flex-end;
+    }
+    &-mobile-icon:focus, &-mobile-icon:active {
+      opacity: 0.8;
+    }
+    &-options {
+      font-family: 'Barlow';
+      color: var(--grayish-blue);
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      background-color: var(--white);
+      top: 120px;
+      left: 0; 
+      right: 0; 
+      margin-left: auto; 
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 90vw;
+      gap: 40px;
+      padding: 40px;
+      transition: all 0.5s ease;
+      > a {
+        color: var(--grayish-blue);
+      }
+    }
+    &-options::before {
+      content:"";
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-bottom: 20px solid var(--white);
+      border-left: 20px solid transparent;
+      top: -20px;
+      right: 0px;
+    }
+    &-options.overlay{
+      opacity: 1;
+      visibility: visible;
+    }
+    &-options .contact{
+      font-family: 'Fraunces';
+      background: var(--yellow);
+      color: black;
+      border-radius: 20px;
+      padding: 14px 24px;
+      font-size: 12px;
+    }
+  }
+}
+
+.offer {
+  text-align: center;
+  &__container{
+    margin: 60px 8%;
+  }
+  &__title {
+    font-family: 'Fraunces';
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+  &__content{
+    font-family: 'Barlow';
+    color: var(--dark-grayish-blue);
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  &__link {
+    font-family: 'Fraunces';
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    &:hover::after, &:focus::after {
+      background-color: hsl(51, 100%, 49%);
+    }
+    &::after{
+      content: '';
+      background-color: hsl(51, 100%, 49%, 0.2);
+      border-radius: 10px;
+      display: block;
+      position: absolute;
+      width: 114%;
+      height: 10px;
+      left: -8px;
+      bottom: -2px;
+      z-index: -1;
+      transition: all 0.5s ease-in-out;
+    }
+    &.red{
+      &:hover::after, &:focus::after {
+        background-color: hsl(7, 99%, 70%);
+      }
+      &::after{
+        background-color: hsl(7, 99%, 70%, 0.4);
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+}
+
+.services {
+  &__graphic-design {
+    position: relative;
+    margin-bottom: -4.5px;
+  }
+  &__container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: var(--dark-desaturated-cyan);
+  }
+  &__title {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 30px; 
+  }
+  &__content {
+    font-family: 'Barlow';
+    font-size: 17px;
+    padding: 30px 4.4% 70px;
+    line-height: 30px;
+  }
+  &__image {
+    width: 100%;
+  }
+}
+
+.testimonials {
+  &__title {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 16px;
+    text-align: center;
+    color: var(--grayish-blue);
+    letter-spacing: 4px;
+    margin-top: 60px;
+  }
+  &__container {
+    padding: 60px 8%;
+    text-align: center;
+  }
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  &__description {
+    font-family: 'Barlow';
+    padding: 40px 0;
+    color: var(--dark-grayish-blue);
+    line-height: 30px;
+  }
+  &__person {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 20px;
+    padding: 10px;
+  }
+  &__position {
+    font-family: 'Barlow';
+    font-size: 16px;
+    color: var(--grayish-blue);
+  }
+}
+
+.images {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .site {
+    &__header {
+      padding: 32px 24px 260px;
+      background-repeat: no-repeat;
+      background-image: url('/images/desktop/image-header.jpg');
+      background-size: cover;
+    }
+    &__arrow {
+      padding-top: 40px;
+      height: 80px;
+    }
+    &__footer {
+      &-menu {
+        justify-content: center;
+        gap: 60px;
+      }
+      &-social {
+        padding-top: 80px;
+      }
+    }
+    &__menu {
+      &-icon {
+        display: none;
+      }
+      &-options {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        position: static;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        justify-content: end;
+        > a {
+          color: white;
+          &:focus, &:hover {
+            color: var(--dark-grayish-blue);
+          }
+        }
+      }
+      &-options .contact {
+        background: white;
+        &:focus, &:hover {
+          color: white;
+          background: rgba(255, 255, 255, 0.258);
+        }
+      }
+    }
+  }
+  .offer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    &__title {
+      padding: 0;
+    }
+    &__image {
+      height: 100%;
+    }
+    &__container {
+      text-align: left;
+      margin: auto 15%;
+    }
+    &__content {
+      font-size: 16px;
+    }
+  }
+
+  .offer:first-child {
+    .offer__title {
+      padding-right: 60px;
+    }
+    .offer__container {
+      text-align: left;
+      margin: auto 15%;
+    }
+    > picture {
+      order: 2;
+    }
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    &__content {
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+  }
+
+  .testimonials {
+    padding: 100px;
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-auto-flow: row;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__avatar {
+      justify-self: center;
+      align-self: center;
+      flex-grow: 1;
+      width: 60px;
+      height: 60px;
+    }
+    &__description {
+      flex-grow: 2;
+    }
+  }
+
+  .images {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}

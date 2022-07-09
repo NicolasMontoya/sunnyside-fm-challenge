@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,600&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&display=swap" rel="stylesheet">
+    <link href="./style.scss" rel="stylesheet">
+    <title>Vite App</title>
+  </head>
+  <body class="site">
+    <header class="site__header">
+      <div class="site__menu">
+        <img class="site__header-logo" src="/images/logo.svg" alt="sunnyside logo">
+        <button class="site__menu-mobile-icon" aria-expanded="false">
+          <img class="site__menu-icon" src="/images/icon-hamburger.svg" alt="Menu icon">
+        </button>
+        <nav role="navigation" aria-label="Main menu" class="site__menu-options">
+          <a href="https://www.google.com/search?q=about"><span>About</span></a>
+          <a href="https://www.google.com/search?q=services"><span>Services</span></a>
+          <a href="https://www.google.com/search?q=projects"><span>Projects</span></a>
+          <a href="https://www.google.com/search?q=contact"><span class="contact">CONTACT</span></a>
+        </nav>
+      </div>
+      <div class="site__menu-banner">
+        <h1 class="site__title">WE ARE CREATIVES</h1>
+        <img class="site__arrow" src="/images/icon-arrow-down.svg" alt="arrow down">
+      </div>
+    </header>
+    <main>
+      <section class="offers">
+        <article class="offer">
+          <picture>
+            <source 
+              srcset="/images/desktop/image-transform.jpg"
+              media="(min-width: 600px)"
+            />
+            <img 
+            class="offer__image" src="/images/mobile/image-transform.jpg" alt="yellow backgroung with an eggs in the middle"
+            />
+          </picture>
+          <div class="offer__container">
+            <h2 class="offer__title">Tranform your brand</h2>
+            <p class="offer__content">We are full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <a href="https://google.com/tranform" aria-label="Learn more transform your brand" class="offer__link">LEARN MORE</a>
+          </div>
+        </article>
+        <article class="offer">
+          <picture>
+            <source 
+              srcset="/images/desktop/image-stand-out.jpg"
+              media="(min-width: 600px)"
+            />
+            <img 
+            class="offer__image" src="/images/mobile/image-stand-out.jpg" alt="Pink cup"
+            />
+          </picture>
+          <div class="offer__container">
+            <h2 class="offer__title">Stand out to the right audience</h2>
+            <p class="offer__content">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>
+            <a  href="https://google.com/stand-out" aria-label="Learn more stand out to the right audience" class="offer__link red" >LEARN MORE</a>
+          </div>
+        </article>
+      </section>
+      <section class="services">
+        <article class="services__graphic-design">
+          <picture>
+            <source 
+              srcset="/images/desktop/image-graphic-design.jpg"
+              media="(min-width: 600px)"
+            />
+            <img class="services__image" src="/images/mobile/image-graphic-design.jpg" alt="Cherries in green layout"
+            />
+          </picture>
+          <div class="services__container">
+            <h2 class="services__title">Graphic Design</h2>
+            <p class="services__content">Great design makes your memorable. We deliver artwork that underscores your brand message and captures potential clients attention.</p>
+          </div>
+        </article>
+        <article class="services__graphic-design">
+          <picture>
+            <source 
+              srcset="/images/desktop/image-photography.jpg"
+              media="(min-width: 600px)"
+            />
+            <img class="services__image" src="/images/mobile/image-photography.jpg" alt="Cherries in green layout"
+            />
+          </picture>
+          <div class="services__container">
+            <h2 class="services__title">Photography</h2>
+            <p class="services__content">Increase your credibility by getting the most stunning, high quality photos that improve your business image.</p>
+          </div>
+        </article>
+      </section>
+      <section class="testimonials">
+        <h2 class="testimonials__title">CLIENT TESTIMONIALS</h2>
+        <div class="testimonials__grid">
+          <article class="testimonials__container">
+            <img class="testimonials__avatar" src="/images/image-emily.jpg" alt="Emily photo" />
+            <p class="testimonials__description">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+            <p class="testimonials__person">Emily R.</p>
+            <p class="testimonials__position">Marketing Director</p>
+          </article>
+          <article class="testimonials__container">
+            <img class="testimonials__avatar" src="/images/image-thomas.jpg" alt="Emily photo" />
+            <p class="testimonials__description">Sunnyside's enthusiams coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.</p>
+            <p class="testimonials__person">Thomas S.</p>
+            <p class="testimonials__position">Chief Operating Officer</p>
+          </article>
+          <article class="testimonials__container">
+            <img class="testimonials__avatar" src="/images/image-jennie.jpg" alt="Emily photo" />
+            <p class="testimonials__description">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <p class="testimonials__person">Jennie F.</p>
+            <p class="testimonials__position">Business owner</p>
+          </article>
+        </div>
+      </section>
+      <section class="images">
+        <picture>
+          <source 
+            srcset="/images/desktop/image-gallery-milkbottles.jpg"
+            media="(min-width: 600px)"
+          />
+          <img src="/images/mobile/image-gallery-milkbottles.jpg" alt="milk bottles"
+          />
+        </picture>
+        <picture>
+          <source 
+            srcset="/images/desktop/image-gallery-orange.jpg"
+            media="(min-width: 600px)"
+          />
+          <img src="/images/mobile/image-gallery-orange.jpg" alt="orange in a plate"
+          />
+        </picture>
+        <picture>
+          <source 
+            srcset="/images/desktop/image-gallery-cone.jpg"
+            media="(min-width: 600px)"
+          />
+          <img src="/images/mobile/image-gallery-cone.jpg" alt="cone without ice cream"
+          />
+        </picture>
+        <picture>
+          <source 
+            srcset="/images/desktop/image-gallery-sugarcubes.jpg"
+            media="(min-width: 600px)"
+          />
+          <img src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="suggar cubes in a pile" 
+          />
+        </picture>
+      </section>
+    </main>
+    <footer class="site__footer">
+      <img class="site__footer-logo" src="/images/logo_2.svg" alt="sunnyside logo">
+      <nav role="navigation" aria-label="Secondary menu" class="site__footer-menu">
+        <a href="https://www.google.com/search?q=about"><span>About</span></a>
+        <a href="https://www.google.com/search?q=services"><span>Services</span></a>
+        <a href="https://www.google.com/search?q=projects"><span>Projects</span></a>
+      </nav>
+      <div class="site__footer-social">
+        <a href="https://facebook.com" class="site__footer-button">
+          <span class="sr-only">Facebook logo</span>
+          <img src="images/icon-facebook.svg" alt="">
+        </a>
+        <a href="https://instagram.com" class="site__footer-button">
+          <span class="sr-only">Instagram logo</span>
+          <img src="images/icon-instagram.svg" alt="">
+        </a>
+        <a href="https://twitter.com" class="site__footer-button">
+          <span class="sr-only">Facebook logo</span>
+          <img src="images/icon-twitter.svg" alt="">
+        </a>
+        <a href="https://pinterest.com" class="site__footer-button">
+          <span class="sr-only">Pinterest logo</span>
+          <img src="images/icon-pinterest.svg" alt="">
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
