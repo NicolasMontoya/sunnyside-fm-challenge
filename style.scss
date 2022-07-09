@@ -289,16 +289,23 @@ button {
 
 @media screen and (min-width: 600px) {
   .site {
+
+    &__title {
+      font-size: 58px;
+      word-spacing: 8px;
+      letter-spacing: 12px;
+      padding: 8px;
+    }
     &__header {
-      padding: 32px 24px 260px;
+      padding: 32px 24px 342px;
       background-repeat: no-repeat;
       background-image: url('/images/desktop/image-header.jpg');
       background-size: cover;
+      &-logo{
+        width: 200px;
+      }
     }
-    &__arrow {
-      padding-top: 40px;
-      height: 80px;
-    }
+
     &__footer {
       &-menu {
         justify-content: center;
@@ -309,6 +316,7 @@ button {
       }
     }
     &__menu {
+      padding: 20px 16px;
       &-mobile-icon {
         display: none;
       }
@@ -325,6 +333,7 @@ button {
         padding: 0;
         background: transparent;
         justify-content: end;
+        gap: 48px;
         > a {
           color: white;
           &:focus, &:hover {
@@ -334,6 +343,11 @@ button {
       }
       &-options .contact {
         background: white;
+        font-size: 16px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 14px;
+        padding-bottom: 14px;
         &:focus, &:hover {
           color: white;
           background: rgba(255, 255, 255, 0.258);
@@ -349,23 +363,40 @@ button {
     margin-bottom: -4.5px;
     &__title {
       padding: 0;
+      margin: 0;
+      font-size: 42px;
+      line-height: 50px;
+      padding-right: 100px;
+      letter-spacing: 2px;
+      margin-bottom: 26px;
     }
     &__container {
       text-align: left;
-      margin: auto 15%;
+      margin: 160px 0 0 112px;
     }
     &__content {
-      font-size: 16px;
+      font-size: 15px;
+      margin: 0;
+      margin-bottom: 40px;
+      margin-right: 180px;
     }
   }
 
   .offer:first-child {
     .offer__title {
-      padding-right: 60px;
+      font-size: 42px;
+      line-height: 50px;
+      padding-right: 0;
+      letter-spacing: 2px;
+      margin-bottom: 26px;
     }
     .offer__container {
       text-align: left;
-      margin: auto 15%;
+      margin: 160px 120px 0 168px;
+    }
+    .offer__content {
+      margin-bottom: 40px;
+      margin-right: 0;
     }
     > picture {
       order: 2;
@@ -381,15 +412,31 @@ button {
       padding-left: 25%;
       padding-right: 25%;
     }
+    &__container{
+      bottom: -18px;
+    }
+    &__content {
+      font-size: 16px;
+      padding: 10px 26% 11%;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
   }
 
   .testimonials {
     padding: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
     &__grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr;
       grid-auto-flow: row;
+    }
+    &__title {
+      word-spacing: 10px;
+      margin-bottom: 20px;
     }
     &__container {
       display: flex;
@@ -399,8 +446,9 @@ button {
       justify-self: center;
       align-self: center;
       flex-grow: 1;
-      width: 60px;
-      height: 60px;
+      margin-bottom: 20px;
+      width: 70px;
+      height: 70px;
     }
     &__description {
       flex-grow: 2;
